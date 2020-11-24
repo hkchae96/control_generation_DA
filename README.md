@@ -1,21 +1,12 @@
 
 
-
-![GeDi logo](https://github.com/salesforce/GeDi/blob/master/gedi_logo_small.png)
---------------------------------------------------------------------------------
-
 Official implementation of [GeDi: Generative Discriminator Guided Sequence Generation](https://arxiv.org/abs/2009.06367)
 
 Blogpost [here](https://blog.einstein.ai/gedi/)
 
-
-#### Colab Notebook on controlling topic using GeDi [here](https://colab.research.google.com/github/salesforce/GeDi/blob/master/GeDi_guided_GPT_2_XL.ipynb)     
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/salesforce/GeDi/blob/master/GeDi_guided_GPT_2_XL.ipynb)
-
 ## Updates
 
-Sept 29, 2020: Adding support for [GeDi-guided GPT-3 generation](https://github.com/salesforce/gedi#gpt-3-generation-added-after-paper-api-access-needed) (API key needed)
+November 24, 2020: Adversarial Domain Adaptive Training for GeDi-guided text generation
 
 
 ## Introduction
@@ -125,6 +116,14 @@ bash get_data.sh
 
 - The directory for model to be saved is specified by `output_dir` argument.
 - When generating from your trained GeDi, you will need to call `../generate_GeDi.py` (called from `bash run_generation.sh`) with `--gedi_model_name_or_path` set to the directory of your trained model.
+
+## Train your own GeDi
+- This repository includes code to adversarially train a topic GeDi for domain adaptation
+- We anticipate the generated sentences to follow the context of unconditioned sentences and maintain the context diversity.
+- Run training using 
+
+`bash run_adversarial_training.sh` which calls `../adversarial_training.py` with the appropriate arguments
+
 
 ## Citation
 ```
