@@ -117,7 +117,7 @@ bash get_data.sh
 - The directory for model to be saved is specified by `output_dir` argument.
 - When generating from your trained GeDi, you will need to call `../generate_GeDi.py` (called from `bash run_generation.sh`) with `--gedi_model_name_or_path` set to the directory of your trained model.
 
-## Train your own GeDi
+## Adversarial Domain Adaptation
 - This repository includes code to adversarially train a topic GeDi for domain adaptation
 - We anticipate the generated sentences to follow the context of unconditioned sentences and maintain the context diversity.
 - Run training using 
