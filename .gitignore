@@ -1,0 +1,9 @@
+__pycache__/
+pretrained_models/
+scripts/apex/
+.ipynb_checkpoints
+data/
+BERT_training
+generated_sentences/
+discriminator_textGAN.py 
+config.py
